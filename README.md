@@ -14,6 +14,6 @@ Handles large data by prompting users to use single mode for oversized inputs.
 # install and setup
  Use this command for install 
 
-```
+```bash
 bash <(curl -Ls https://github.com/mahyyar/sub-to-link/raw/main/install.sh)
 ```
