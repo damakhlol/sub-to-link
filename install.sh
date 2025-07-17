@@ -11,9 +11,9 @@ case $ACTION in
     echo -e "\033[34mInstalling Python and required tools...\033[0m"
     sudo apt install -y python3 python3-pip python3-venv git
 
-    echo -e "\033[34mCloning project from GitHub...\033[0m"
-    REPO_URL="https://github.com/mahyyar/sub-to-link.git"
-    REPO_DIR="/opt/mahyar-sub"
+    echo -e "\033[34mCloning project from your GitHub fork...\033[0m"
+    REPO_URL="https://github.com/damakhlol/sub-to-link.git"
+    REPO_DIR="/opt/sub-to-link"
 
     if [ -d "$REPO_DIR" ]; then
       sudo rm -rf "$REPO_DIR"
@@ -39,7 +39,7 @@ case $ACTION in
     echo -e "\033[34mRunning bot in background...\033[0m"
     nohup python main.py > /dev/null 2>&1 &
 
-    echo -e "\033[34mBot started successfully!\033[0m"
+    echo -e "\033[32mBot started successfully!\033[0m"
     ;;
   [Rr][Ee][Mm][Oo][Vv][Ee])
     echo -e "\033[34mFinding and stopping bot processes...\033[0m"
@@ -50,11 +50,11 @@ case $ACTION in
         echo -e "\033[34mStopped process with PID $PID\033[0m"
       done
     else
-      echo -e "\033[34mNo running bot processes found\033[0m"
+      echo -e "\033[33mNo running bot processes found\033[0m"
     fi
     ;;
   *)
-    echo -e "\033[34mInvalid option. Please choose 'install' or 'remove'.\033[0m"
+    echo -e "\033[31mInvalid option. Please choose 'install' or 'remove'.\033[0m"
     exit 1
     ;;
 esac
