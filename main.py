@@ -30,7 +30,7 @@ def fetch_subscription(url: str):
         return None
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await send_message(update, "سلام! لطفاً لینک اشتراک خود را ارسال کنید⚪️.")
+    await send_message(update, "⚪️سلام! لطفاً لینک اشتراک خود را ارسال کنید.")
 
 async def ask_link_mode(update: Update, context: ContextTypes.DEFAULT_TYPE, link: str):
     keyboard = [[
