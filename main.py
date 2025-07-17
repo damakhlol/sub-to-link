@@ -30,7 +30,7 @@ def fetch_subscription(url: str):
         return None
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await send_message(update, "سلام! لطفاً لینک اشتراک خود را ارسال کنید.")
+    await send_message(update, "سلام! لطفاً لینک اشتراک خود را ارسال کنید⚪️.")
 
 async def ask_link_mode(update: Update, context: ContextTypes.DEFAULT_TYPE, link: str):
     keyboard = [[
@@ -38,7 +38,7 @@ async def ask_link_mode(update: Update, context: ContextTypes.DEFAULT_TYPE, link
         InlineKeyboardButton("📜 همه با هم", callback_data="all")
     ]]
     reply_markup = InlineKeyboardMarkup(keyboard)
-    await update.message.reply_text("حالت ارسال را انتخاب کنید:", reply_markup=reply_markup)
+    await update.message.reply_text("🗃حالت ارسال را انتخاب کنید:", reply_markup=reply_markup)
     context.user_data["subscription_link"] = link
 
 async def process_links(update: Update, context: ContextTypes.DEFAULT_TYPE):
