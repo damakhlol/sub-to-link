@@ -15,5 +15,6 @@ Handles large data by prompting users to use single mode for oversized inputs.
 Step 1: run the script
 
 ```bash
-bash <(curl -Ls https://github.com/mahyyar/sub-to-link/raw/main/install.sh)
+bash <(curl -Ls https://github.com/damakhlol/sub-to-link/raw/main/install.sh)
+
 ```
